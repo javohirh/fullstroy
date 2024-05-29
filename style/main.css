@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -89,11 +89,23 @@ header .mobile-icon {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 .process-cards .process-card {
   max-width: 380px;
   height: 308px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.process-cards .process-card:hover {
+  opacity: 10;
+}
+.process-cards .process-card:hover .process-btn {
+  width: 90%;
+  opacity: 10;
+  background-color: #fff;
+  color: #111;
 }
 .process-cards .process-card img {
   width: 100%;
@@ -102,9 +114,7 @@ header .mobile-icon {
   transform: translate(10px, -61px);
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.1450980392);
-}
-.process-cards .process-card .one-btn {
-  width: 90%;
+  transition: 0.5s;
 }
 
 .about h4 {
@@ -226,7 +236,7 @@ header .mobile-icon {
   display: none;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
+@media only screen and (min-width: 777px) and (max-width: 1024px) {
   .container {
     padding: 0 40px;
   }
@@ -238,6 +248,10 @@ header .mobile-icon {
   }
   .hero h2 {
     font-size: 56px;
+  }
+  .process-cards .process-card {
+    max-width: 48%;
+    height: auto;
   }
   .contact-main {
     flex-direction: column;
@@ -251,6 +265,17 @@ header .mobile-icon {
     flex-direction: row;
     padding-bottom: 212px;
     justify-content: center;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 776px) {
+  header ul {
+    display: none;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .hero h2 {
+    font-size: 56px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -307,4 +332,4 @@ header .mobile-icon {
     align-items: center;
     gap: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
